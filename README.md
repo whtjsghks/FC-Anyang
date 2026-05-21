@@ -1,73 +1,18 @@
-# React + TypeScript + Vite
+# FC-Anyang
+## FC 안양 홈구장 좌석 안내 웹사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1. 프로젝트 개요
+#### 목적
+- FC 안양 홈경기 방문객(특히 첫 방문자 혹은 원정팬)이 입장 게이트에서 자신의 좌석 구역까지 이동하는 최적의 동선을 제공하여 경기장 내 혼잡도를 줄이고 팬 경험을 향상시킴
 
-Currently, two official plugins are available:
+### 2. 배경 및 필요성
+#### 문제 정의
+- 홈경기 당일, 세분화된 좌석 구역으로 인해 자신의 좌석을 찾는데 어려움을 겪는 관중이 다수 발생함. 이는 게이트 주변의 병목 현상을 유발하고 전반적인 홈경기 운영 효율을 저하시킴
+#### 해결 방안
+- 모바일 웹 환경에서 입장 게이트와 자신의 좌석을 입력하면 최적 이동 경로를 안내해주는 사이트 구축
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. 핵심 기능 (요구사항)
+#### 입장 게이트 / 좌석 설정
+#### 최적 경로 안내
+- 사진 기반 경로 시각화
+- 여러 개의 사진을 통해 이동 경로 표시
