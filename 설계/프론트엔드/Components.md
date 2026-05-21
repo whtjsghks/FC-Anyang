@@ -23,3 +23,6 @@
  - ArrowOverlay: 전달받은 방향 데이터에 따라 화살표 아이콘을 사진 중앙에 띄워줌
  - InstructionBoard: 길찾기에 도움을 주는 텍스트를 표시
  - NavigationControls: 사용자의 터치나 클릭을 감지하여 상위 컨테이너에게 신호를 보냄
+
+
+<img width="705" height="696" alt="frontend_architecture drawio" src="https://github.com/user-attachments/assets/eb056b14-89c5-4c41-8e17-e2449b04de53" />
