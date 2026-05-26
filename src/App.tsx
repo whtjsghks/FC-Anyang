@@ -40,11 +40,6 @@ export default function WayfinderContainer() {
   if (isLoading) return <div style={{ textAlign: 'center', padding: '50px' }}>로딩 중...</div>;
 
   return (
-    <div className="app-container" style={{ fontFamily: 'sans-serif' }}>
-      <header style={{ backgroundColor: '#502878', color: 'white', padding: '15px', textAlign: 'center' }}>
-        <h1>FC 안양 스마트 Map</h1>
-      </header>
-      
       <main style={{ padding: '20px' }}>
         {routeData.length === 0 ? (
           <SearchPanel onSubmit={handleSearch} />
@@ -59,6 +54,5 @@ export default function WayfinderContainer() {
           />
         )}
       </main>
-    </div>
   );
 }
