@@ -1,0 +1,18 @@
+{
+  "gate_1_to_block_a": [
+    {
+      "step": 1,
+      "locationName": "1번 게이트",
+      "baseImageUrl": "/assets/images/gate1.jpg",
+      "arrowType": "straight",
+      "instructionText": "1번 게이트 입장 후 약 50m 직진하세요."
+    },
+    {
+      "step": 2,
+      "locationName": "가변석 출입구",
+      "baseImageUrl": "/assets/images/block_a.jpg",
+      "arrowType": "straight",
+      "instructionText": "가변석 A블록 출입구에 도착했습니다."
+    }
+  ]
+}

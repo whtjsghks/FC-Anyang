@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import type { StepData, IRouteApiService, IOverlayStrategy } from './types';
-import { FastApiRouteAdapter, SVGArrowStrategy } from './services';
+import { LocalJsonRouteAdapter, SVGArrowStrategy } from './services';
 import { SearchPanel } from './components/SearchPanel';
 import { RouteViewer } from './components/RouteViewer';
 
 // [의존성 주입] 컨테이너 외부에서 구현체를 생성 (결합도 최소화)
-const routeApiService: IRouteApiService = new FastApiRouteAdapter();
+const routeApiService: IRouteApiService = new LocalJsonRouteAdapter();
 const arrowOverlayStrategy: IOverlayStrategy = new SVGArrowStrategy();
 
 export default function WayfinderContainer() {
