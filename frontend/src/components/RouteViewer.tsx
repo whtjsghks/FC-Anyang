@@ -14,13 +14,24 @@ interface RouteViewerProps {
   overlayStrategy: IOverlayStrategy;
   onNext: () => void;
   onPrev: () => void;
+  onReset: () => void;
   isFirst: boolean;
   isLast: boolean;
 }
 
-export const RouteViewer: React.FC<RouteViewerProps> = ({ stepData, overlayStrategy, onNext, onPrev, isFirst, isLast }) => {
+export const RouteViewer: React.FC<RouteViewerProps> = ({ stepData, overlayStrategy, onNext, onPrev, onReset, isFirst, isLast }) => {
   return (
     <div className="route-viewer" style={{ maxWidth: '400px', margin: '0 auto', border: '1px solid #ccc' }}>
+
+      <div style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 20 }}>
+        <button 
+          onClick={onReset} 
+          style={{ padding: '8px 12px', background: 'rgba(255, 255, 255, 0.8)', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}
+        >
+          🔄 처음으로
+        </button>
+      </div>
+
       <div style={{ position: 'relative' }}>
         <PhotoRenderer imageUrl={stepData.baseImageUrl} />
         {overlayStrategy.renderOverlay(stepData.arrowType)}

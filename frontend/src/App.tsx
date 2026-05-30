@@ -36,6 +36,11 @@ export default function WayfinderContainer() {
     if (currentStepIndex > 0) setCurrentStepIndex(prev => prev - 1);
   };
 
+  const handleReset = () => {
+    setRouteData([]);
+    setCurrentStepIndex(0);
+  }
+
   // 렌더링 분기
   if (isLoading) return <div style={{ textAlign: 'center', padding: '50px' }}>로딩 중...</div>;
 
@@ -49,6 +54,7 @@ export default function WayfinderContainer() {
             overlayStrategy={arrowOverlayStrategy}
             onNext={handleNext}
             onPrev={handlePrev}
+            onReset={handleReset}
             isFirst={currentStepIndex === 0}
             isLast={currentStepIndex === routeData.length - 1}
           />

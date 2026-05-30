@@ -1,5 +1,5 @@
 {
-  "gate_1_to_block_a": [
+  "gate_1_to_variable_a_block": [
     {
       "step": 1,
       "locationName": "1번 게이트",
@@ -9,10 +9,40 @@
     },
     {
       "step": 2,
-      "locationName": "가변석 출입구",
+      "locationName": "푸드트럭 앞 교차로",
+      "baseImageUrl": "/assets/images/foodtruck.jpg",
+      "arrowType": "left",
+      "instructionText": "가변석 방향을 향해 교차로에서 좌회전하세요."
+    },
+    {
+      "step": 3,
+      "locationName": "가변석 A블록 출입구",
       "baseImageUrl": "/assets/images/block_a.jpg",
       "arrowType": "straight",
-      "instructionText": "가변석 A블록 출입구에 도착했습니다."
+      "instructionText": "목적지인 가변석 A블록 출입구에 도착했습니다."
+    }
+  ],
+  "variable_a_block_to_toilet_north": [
+    {
+      "step": 1,
+      "locationName": "가변석 A블록 출입구",
+      "baseImageUrl": "/assets/images/block_a.jpg",
+      "arrowType": "right",
+      "instructionText": "좌석에서 나와 복도를 따라 우측으로 이동하세요."
+    },
+    {
+      "step": 2,
+      "locationName": "중앙 통로",
+      "baseImageUrl": "/assets/images/foodtruck.jpg",
+      "arrowType": "straight",
+      "instructionText": "중앙 통로를 지나 30m 직진하세요."
+    },
+    {
+      "step": 3,
+      "locationName": "북측 화장실",
+      "baseImageUrl": "/assets/images/gate1.jpg",
+      "arrowType": "straight",
+      "instructionText": "가장 가까운 북측 화장실에 도착했습니다."
     }
   ]
 }

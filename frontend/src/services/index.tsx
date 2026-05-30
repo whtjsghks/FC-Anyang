@@ -17,6 +17,9 @@ export class LocalJsonRouteAdapter implements IRouteApiService {
       // 2. 출발지와 도착지를 조합하여 JSON 안의 키(Key) 값을 만듭니다. (예: "gate_1_to_block_a_variable")
       const routeKey = `${startId}_to_${endId}`;
 
+      console.log("🔍 내가 찾으려는 키 이름:", routeKey);
+      console.log("📦 JSON 파일 안에 들어있는 데이터들:", data);
+
       // 3. 해당 경로 데이터가 존재하면 반환하고, 없으면 에러를 던집니다.
       if (data[routeKey]) {
         return data[routeKey];
