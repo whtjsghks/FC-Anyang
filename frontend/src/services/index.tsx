@@ -1,5 +1,4 @@
-import React from 'react';
-import type { IRouteApiService, IOverlayStrategy, StepData } from '../types';
+import type { IRouteApiService, StepData } from '../types';
 
 // [어댑터 패턴] 기존 백엔드(FastAPI) 대신 로컬 JSON 파일을 읽어오는 구현체로 교체됨
 export class LocalJsonRouteAdapter implements IRouteApiService {
@@ -29,32 +28,6 @@ export class LocalJsonRouteAdapter implements IRouteApiService {
     } catch (error) {
       console.error(error);
       throw error; // App.tsx의 catch 블록으로 에러를 넘김
-    }
-  }
-}
-
-// [전략 패턴] SVG 화살표를 렌더링하는 구체적인 알고리즘
-export class SVGArrowStrategy implements IOverlayStrategy {
-  renderOverlay(arrowType: string): React.ReactNode {
-    const arrowStyles = {
-      position: 'absolute' as const,
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      fontSize: '4rem',
-      color: '#502878', // FC 안양 보라색 컬러 적용
-      textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-      zIndex: 10,
-    };
-
-    switch (arrowType) {
-      case 'left':
-        return <div style={arrowStyles}>⬅️</div>; 
-      case 'right':
-        return <div style={arrowStyles}>➡️</div>;
-      case 'straight':
-      default:
-        return <div style={arrowStyles}>⬆️</div>;
     }
   }
 }

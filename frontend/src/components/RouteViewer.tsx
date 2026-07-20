@@ -1,17 +1,34 @@
 import React from 'react';
-import type { StepData, IOverlayStrategy } from '../types';
+import type { StepData } from '../types';
 
+// 💡 텍스트 대신 실제 <img> 태그를 사용하도록 수정
 const PhotoRenderer: React.FC<{ imageUrl: string }> = ({ imageUrl }) => (
-  <div style={{ width: '100%', height: '300px', backgroundColor: '#ddd', position: 'relative' }}>
-    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
-      [배경 사진 영역: {imageUrl}]
-    </div>
+  <div style={{ width: '100%', height: '300px', backgroundColor: '#ddd', position: 'relative', overflow: 'hidden' }}>
+    <img 
+      src={imageUrl} 
+      alt="경로 안내 이미지" 
+      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+      // 이미지를 찾을 수 없을 때 엑스박스 대신 대체 텍스트나 기본 배경을 띄우는 에러 처리
+      onError={(e) => {
+        (e.target as HTMLImageElement).style.display = 'none';
+        if ((e.target as HTMLImageElement).parentElement) {
+          const fallbackDiv = document.createElement('div');
+          fallbackDiv.style.width = '100%';
+          fallbackDiv.style.height = '100%';
+          fallbackDiv.style.display = 'flex';
+          fallbackDiv.style.alignItems = 'center';
+          fallbackDiv.style.justifyContent = 'center';
+          fallbackDiv.style.color = '#666';
+          fallbackDiv.innerText = `[이미지 없음: ${imageUrl}]`;
+          (e.target as HTMLImageElement).parentElement?.appendChild(fallbackDiv);
+        }
+      }}
+    />
   </div>
 );
 
 interface RouteViewerProps {
   stepData: StepData;
-  overlayStrategy: IOverlayStrategy;
   onNext: () => void;
   onPrev: () => void;
   onReset: () => void;
@@ -19,9 +36,9 @@ interface RouteViewerProps {
   isLast: boolean;
 }
 
-export const RouteViewer: React.FC<RouteViewerProps> = ({ stepData, overlayStrategy, onNext, onPrev, onReset, isFirst, isLast }) => {
+export const RouteViewer: React.FC<RouteViewerProps> = ({ stepData, onNext, onPrev, onReset, isFirst, isLast }) => {
   return (
-    <div className="route-viewer" style={{ maxWidth: '400px', margin: '0 auto', border: '1px solid #ccc' }}>
+    <div className="route-viewer" style={{ maxWidth: '400px', margin: '0 auto', border: '1px solid #ccc', position: 'relative' }}>
 
       <div style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 20 }}>
         <button 
@@ -34,7 +51,6 @@ export const RouteViewer: React.FC<RouteViewerProps> = ({ stepData, overlayStrat
 
       <div style={{ position: 'relative' }}>
         <PhotoRenderer imageUrl={stepData.baseImageUrl} />
-        {overlayStrategy.renderOverlay(stepData.arrowType)}
       </div>
       <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f9f9f9', minHeight: '80px' }}>
         <h3>{stepData.locationName}</h3>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import type { StepData, IRouteApiService, IOverlayStrategy } from './types';
-import { LocalJsonRouteAdapter, SVGArrowStrategy } from './services';
+import type { StepData, IRouteApiService} from './types';
+import { LocalJsonRouteAdapter } from './services';
 import { SearchPanel } from './components/SearchPanel';
 import { RouteViewer } from './components/RouteViewer';
 
 // [의존성 주입] 컨테이너 외부에서 구현체를 생성 (결합도 최소화)
 const routeApiService: IRouteApiService = new LocalJsonRouteAdapter();
-const arrowOverlayStrategy: IOverlayStrategy = new SVGArrowStrategy();
 
 export default function WayfinderContainer() {
   // [Model] 상태 관리 영역
@@ -51,7 +50,6 @@ export default function WayfinderContainer() {
         ) : (
           <RouteViewer 
             stepData={routeData[currentStepIndex]}
-            overlayStrategy={arrowOverlayStrategy}
             onNext={handleNext}
             onPrev={handlePrev}
             onReset={handleReset}
