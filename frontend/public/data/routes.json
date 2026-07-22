@@ -45,5 +45,364 @@
       "locationName": "좌석 입구",
       "baseImageUrl": "/images/north_gate/f1_entry.jpg"
     }
+  ],
+  "north_gate_to_sup_f2": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/north_gate/f1_entry.jpg"
+    }
+  ],
+  "north_gate_to_sup_f3": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/north_gate/f1_entry.jpg"
+    }
+  ],
+  "north_gate_to_sup_f4": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/north_gate/f1_entry.jpg"
+    }
+  ],
+  "north_gate_to_sup_f5": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "가변석 뒤",
+      "baseImageUrl": "/images/3tof5_1.jpg"
+    },
+    {
+      "step": 10,
+      "locationName": "푸드트럭 앞",
+      "baseImageUrl": "/images/3tof5_2.jpg"
+    },
+    {
+      "step": 11,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/3tof5_3.jpg"
+    }
+  ],
+  "north_gate_to_sup_f6": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "가변석 뒤",
+      "baseImageUrl": "/images/3tof5_1.jpg"
+    },
+    {
+      "step": 10,
+      "locationName": "푸드트럭 앞",
+      "baseImageUrl": "/images/3tof5_2.jpg"
+    },
+    {
+      "step": 11,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/3tof5_3.jpg"
+    }
+  ],
+  "north_gate_to_sup_f7": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "가변석 뒤",
+      "baseImageUrl": "/images/3tof5_1.jpg"
+    },
+    {
+      "step": 10,
+      "locationName": "푸드트럭 앞",
+      "baseImageUrl": "/images/3tof5_2.jpg"
+    },
+    {
+      "step": 11,
+      "locationName": "좌석 입구",
+      "baseImageUrl": "/images/3tof5_3.jpg"
+    }
+  ],
+  "north_gate_to_sup_r10": [
+    {
+      "step": 1,
+      "locationName": "북문",
+      "baseImageUrl": "/images/north_gate/north_left.jpg"
+    },
+    {
+      "step": 2,
+      "locationName": "북문 주차장",
+      "baseImageUrl": "/images/north_gate/n_parking_left.jpg"
+    },
+    {
+      "step": 3,
+      "locationName": "클럽하우스 앞",
+      "baseImageUrl": "/images/north_gate/clubhouse.jpg"
+    },
+    {
+      "step": 4,
+      "locationName": "메인 게이트",
+      "baseImageUrl": "/images/north_gate/mediaroom.jpg"
+    },
+    {
+      "step": 5,
+      "locationName": "사무국 주차장",
+      "baseImageUrl": "/images/north_gate/officelot.jpg"
+    },
+    {
+      "step": 6,
+      "locationName": "티켓 판매처 앞",
+      "baseImageUrl": "/images/north_gate/ticketto3.jpg"
+    },
+    {
+      "step": 7,
+      "locationName": "3번 게이트",
+      "baseImageUrl": "/images/north_gate/n_3.jpg"
+    },
+    {
+      "step": 8,
+      "locationName": "대형 포토존",
+      "baseImageUrl": "/images/north_gate/photozone.jpg"
+    },
+    {
+      "step": 9,
+      "locationName": "가변석 뒤",
+      "baseImageUrl": "/images/3tor10_1.jpg"
+    }
   ]
 }
