@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { StepData, IRouteApiService} from './types';
 import { LocalJsonRouteAdapter } from './services';
 import { SearchPanel } from './components/SearchPanel';
