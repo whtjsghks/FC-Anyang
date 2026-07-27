@@ -78,6 +78,7 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
               <option value="main_gate">정문</option>
               <option value="north_gate">북문</option>
               <option value="south_gate">남문</option>
+              <option value="west_gate">서문</option>
             </select>
             <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
           </div>
