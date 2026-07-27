@@ -5,8 +5,7 @@ export interface StepData {
   step: number;
   locationName: string;
   baseImageUrl: string;
-  arrowType: 'straight' | 'left' | 'right';
-  instructionText: string;
+  instructionText?: string;
 }
 
 // [DIP] 백엔드 API 통신을 위한 인터페이스 추상화
