@@ -92,9 +92,14 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
               className="w-full bg-[#1a1a1a] text-white text-base pl-12 pr-12 py-4 rounded-xl border border-gray-800 appearance-none focus:outline-none focus:border-[#502878] focus:ring-1 focus:ring-[#502878] transition-all"
             >
               <option value="좌석권종" disabled hidden>좌석권종</option>
-              <option value="general">일반석</option>
-              <option value="variable">가변석</option>
+              <option value="firststanding">퍼스트 스탠딩</option>
+              <option value="first">퍼스트석</option>
+              <option value="standing">스탠딩석</option>
               <option value="supporters">서포터즈석</option>
+              <option value="harrington">해링턴플레이스존</option>
+              <option value="general">일반 지정석(2층)</option>
+              <option value="general_2f">일반 자유석(2층)</option>
+              <option value="variable">가변석</option>
               <option value="tables">테이블석</option>
               <option value="picnic">피크닉존</option>
               <option value="neutral">중립 응원석</option>

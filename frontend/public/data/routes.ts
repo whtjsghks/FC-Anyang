@@ -1,7 +1,7 @@
 // src/data/routes.ts
 import type { StepData } from '../../src/types/index';
 
-// 공통 경로 정의 (북문 ~ GATE3까지 Step 1~7)
+// 1. 공통 경로 정의 (북문 ~ GATE3까지 Step 1~7)
 const baseNorthto3Route = [
   { step: 1, locationName: "북문", baseImageUrl: "/images/north_gate/north_left.jpg" },
   { step: 2, locationName: "북문 주차장", baseImageUrl: "/images/north_gate/n_parking_left.jpg" },
@@ -37,7 +37,7 @@ const baseNorthto2fGateRoute = [
 // 북문 ~ 원정GATE(원정석)
 const baseNorthtoAwayRoute = [
   { step: 1, locationName: "북문", baseImageUrl: "/images/north_gate/north_left.jpg" },
-  { step: 2, locationName: "북문 주차장", baseImageUrl: "/images/north_gate/n_parking_left.jpg" },
+  { step: 2, locationName: "북문 주차장", baseImageUrl: "/images/north_gate/n_parking_away.jpg" },
   { step: 3, locationName: "원정 GATE 입구", baseImageUrl: "/images/north_gate/north_to_away_1.jpg" },
   { step: 4, locationName: "원정 GATE", baseImageUrl: "/images/north_gate/north_to_away_2.jpg" },
   { step: 5, locationName: "원정 복도 1", baseImageUrl: "/images/north_gate/north_to_away_3.jpg" },
@@ -49,7 +49,7 @@ const baseNorthtoAwayRoute = [
   { step: 11, locationName: "17번 입구", baseImageUrl: "/images/north_gate/north_to_away_9.jpg" }
 ];
 
-// 공통 경로 정의 (남문 ~ GATE3까지)
+// 2. 공통 경로 정의 (남문 ~ GATE3까지)
 const baseSouthto3Route = [
   { step: 1, locationName: "남문", baseImageUrl: "/images/south_gate/south_to_gate3.jpg" }
 ];
@@ -94,7 +94,7 @@ const baseSouthtoAwayRoute = [
   { step: 14, locationName: "17번 입구", baseImageUrl: "/images/north_gate/north_to_away_9.jpg" }
 ];
 
-// 공통 경로 정의 (정문 ~ GATE3까지)
+// 3. 공통 경로 정의 (정문 ~ GATE3까지)
 const baseMainto3Route = [
   { step: 1, locationName: "정문", baseImageUrl: "/images/main_gate/main_to_gate3_1.jpg" },
   { step: 2, locationName: "티켓 판매처 앞", baseImageUrl: "/images/main_gate/main_to_gate3_2.jpg" },
@@ -139,40 +139,89 @@ const baseMaintoAwayRoute = [
   { step: 12, locationName: "17번 입구", baseImageUrl: "/images/north_gate/north_to_away_9.jpg" }
 ];
 
+// 4. 공통 경로 정의 (서문 ~ GATE3까지)
+const baseWestto3Route = [
+  { step: 1, locationName: "서문", baseImageUrl: "/images/west_gate/west_gate.jpg" },
+  { step: 2, locationName: "서문 주차장", baseImageUrl: "/images/west_gate/west_right.jpg" },
+  { step: 3, locationName: "선수단 게이트 앞", baseImageUrl: "/images/west_gate/player_gate.jpg" },
+  { step: 4, locationName: "남문 주차장", baseImageUrl: "/images/west_gate/west_to_3.jpg" },
+  { step: 5, locationName: "GATE 3", baseImageUrl: "/images/west_gate/west_gate3.jpg" },
+];
+
+// 서문 ~ GATE11
+const baseWestto11Route = [
+  { step: 1, locationName: "서문", baseImageUrl: "/images/west_gate/west_gate.jpg" },
+  { step: 2, locationName: "서문 주차장", baseImageUrl: "/images/west_gate/west_left.jpg" },
+  { step: 3, locationName: "안양도시공사 앞", baseImageUrl: "/images/west_gate/west_to_11_1.jpg" },
+  { step: 4, locationName: "암벽장 앞", baseImageUrl: "/images/west_gate/west_to_11_2.jpg" },
+  { step: 5, locationName: "북쪽 조명탑", baseImageUrl: "/images/west_gate/west_to_11_3.jpg" },
+  { step: 6, locationName: "GATE 11", baseImageUrl: "/images/west_gate/west_gate11.jpg" },
+  { step: 7, locationName: "GATE 11 계단", baseImageUrl: "/images/north_gate/north_to_11_3.jpg" },
+  { step: 8, locationName: "중립 응원석 입구", baseImageUrl: "/images/north_gate/north_to_11_4.jpg" }
+];
+
+// 서문 ~ 2층 GATE
+const baseWestto2fGateRoute = [
+  { step: 1, locationName: "서문", baseImageUrl: "/images/west_gate/west_gate.jpg" },
+  { step: 2, locationName: "2층 게이트 앞", baseImageUrl: "/images/west_gate/west_2f.jpg" },
+  { step: 3, locationName: "2층 GATE", baseImageUrl: "/images/2f_gate/2f_gate.jpg" }
+];
+
+// 서문 ~ 원정GATE(원정석)
+const baseWesttoAwayRoute = [
+  { step: 1, locationName: "서문", baseImageUrl: "/images/west_gate/west_gate.jpg" },
+  { step: 2, locationName: "서문 주차장", baseImageUrl: "/images/west_gate/west_right.jpg" },
+  { step: 3, locationName: "선수단 게이트 앞", baseImageUrl: "/images/west_gate/player_gate.jpg" },
+  { step: 4, locationName: "남문 주차장", baseImageUrl: "/images/west_gate/west_to_3.jpg" },
+  { step: 5, locationName: "GATE3 앞", baseImageUrl: "/images/south_gate/south_to_11_2.jpg" },
+  { step: 6, locationName: "티켓 판매처 앞", baseImageUrl: "/images/south_gate/south_to_11_3.jpg" },
+  { step: 7, locationName: "메인 게이트 앞", baseImageUrl: "/images/south_gate/south_to_11_4.jpg" },
+  { step: 8, locationName: "클럽 하우스 앞", baseImageUrl: "/images/south_gate/south_to_11_5.jpg" },
+  { step: 9, locationName: "원정 GATE 입구", baseImageUrl: "/images/north_gate/north_to_away_1.jpg" },
+  { step: 10, locationName: "원정 GATE", baseImageUrl: "/images/north_gate/north_to_away_2.jpg" },
+  { step: 11, locationName: "원정 복도 1", baseImageUrl: "/images/north_gate/north_to_away_3.jpg" },
+  { step: 12, locationName: "원정 복도 2", baseImageUrl: "/images/north_gate/north_to_away_4.jpg" },
+  { step: 13, locationName: "19번 입구", baseImageUrl: "/images/north_gate/north_to_away_5.jpg" },
+  { step: 14, locationName: "원정 복도 3", baseImageUrl: "/images/north_gate/north_to_away_6.jpg" },
+  { step: 15, locationName: "원정 복도 4", baseImageUrl: "/images/north_gate/north_to_away_7.jpg" },
+  { step: 16, locationName: "18번 입구", baseImageUrl: "/images/north_gate/north_to_away_8.jpg" },
+  { step: 17, locationName: "17번 입구", baseImageUrl: "/images/north_gate/north_to_away_9.jpg" }
+];
+
 // 2.1 북문 - 도착지 그룹별 추가 경로 정의
 const specificRoutes_north = {
   // F1 ~ F4 그룹 (모두 동일한 끝 경로)
   f1_to_f4: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/north_gate/f1_entry.jpg" }
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
   ],
   // F5 ~ F7 그룹
   f5_to_f7: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ],
   // R10
   r10: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_r10.jpg" },
     { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor10_1.jpg" }
   ],
   // R11, R12, S1
   r11_r12_s1: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 10, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor11_1.jpg"}
   ],
   // R13, S2
   r13_s2: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 10, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor13_1.jpg"}
   ],
   // R14, S3
   r14_s3: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor14_1.jpg"}
@@ -220,12 +269,13 @@ const specificRoutes_north = {
     { step: 10, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
     { step: 11, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
     { step: 12, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
-    { step: 13, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
+    { step: 13, locationName: "R2 뒤", baseImageUrl: "/images/gate3/behind_r2.jpg"},
+    { step: 14, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
   ],
   // T3
   t3: [
     { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
-    { step: 9, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 9, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/t3_1.jpg"},
     { step: 10, locationName: "2층 입구 앞", baseImageUrl: "/images/gate3/gate2_front.jpg" },
     { step: 11, locationName: "2층 입구", baseImageUrl: "/images/gate3/gate2_entry.jpg"},
     { step: 12, locationName: "2층 계단", baseImageUrl: "/images/gate3/2nd_stairs.jpg"},
@@ -234,7 +284,7 @@ const specificRoutes_north = {
   ],
   // R15, R16
   r15_r16: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "좌석 입구 옆", baseImageUrl: "/images/gate3/r15_entry.jpg" },
@@ -242,7 +292,7 @@ const specificRoutes_north = {
   ],
   // R17, R18, R19
   r17_to_r19: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -251,7 +301,7 @@ const specificRoutes_north = {
   ],
   // R20, R21, R22
   r20_to_r22: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -260,7 +310,7 @@ const specificRoutes_north = {
   ],
   // R23, R24, R25
   r23_to_r25: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -269,7 +319,7 @@ const specificRoutes_north = {
   ],
   // R26
   r26: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 11, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -310,7 +360,7 @@ const specificRoutes_north = {
   ],
   // 피크닉존
   picninc: [
-    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg"},
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg"},
     { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
     { step: 10, locationName: "해링턴 플레이스존 옆", baseImageUrl: "/images/gate3/gate8.jpg"},
     { step: 11, locationName: "1층 GATE9", baseImageUrl: "/images/gate3/gate9.jpg"},
@@ -318,6 +368,18 @@ const specificRoutes_north = {
     { step: 13, locationName: "2층", baseImageUrl: "/images/gate3/2f.jpg"},
     { step: 14, locationName: "MD 대여존 앞", baseImageUrl: "/images/gate3/rental_zone.jpg"},
     { step: 15, locationName: "좌석 입구", baseImageUrl: "/images/gate3/picnic_entry.jpg"},
+  ],
+  // FS1, FS2, FS3
+  fs1_to_fs3: [
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
+  ],
+  // FS4, FS5, FS6, FS7
+  fs4_to_fs7: [
+    { step: 8, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 9, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 10, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ]
 };
 
@@ -325,36 +387,36 @@ const specificRoutes_north = {
 const specificRoutes_main = {
   // F1 ~ F4 그룹 (모두 동일한 끝 경로)
   f1_to_f4: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/north_gate/f1_entry.jpg" }
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
   ],
   // F5 ~ F7 그룹
   f5_to_f7: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ],
   // R10
   r10: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_r10.jpg" },
     { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor10_1.jpg" }
   ],
   // R11, R12, S1
   r11_r12_s1: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 6, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor11_1.jpg"}
   ],
   // R13, S2
   r13_s2: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 6, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor13_1.jpg"}
   ],
   // R14, S3
   r14_s3: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor14_1.jpg"}
@@ -402,12 +464,13 @@ const specificRoutes_main = {
     { step: 6, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
     { step: 7, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
     { step: 8, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
-    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
+    { step: 9, locationName: "R2 뒤", baseImageUrl: "/images/gate3/behind_r2.jpg"},
+    { step: 10, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
   ],
   // T3
   t3: [
     { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
-    { step: 5, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 5, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/t3_1.jpg"},
     { step: 6, locationName: "2층 입구 앞", baseImageUrl: "/images/gate3/gate2_front.jpg" },
     { step: 7, locationName: "2층 입구", baseImageUrl: "/images/gate3/gate2_entry.jpg"},
     { step: 8, locationName: "2층 계단", baseImageUrl: "/images/gate3/2nd_stairs.jpg"},
@@ -416,7 +479,7 @@ const specificRoutes_main = {
   ],
   // R15, R16
   r15_r16: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "좌석 입구 옆", baseImageUrl: "/images/gate3/r15_entry.jpg" },
@@ -424,7 +487,7 @@ const specificRoutes_main = {
   ],
   // R17, R18, R19
   r17_to_r19: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -433,7 +496,7 @@ const specificRoutes_main = {
   ],
   // R20, R21, R22
   r20_to_r22: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -442,7 +505,7 @@ const specificRoutes_main = {
   ],
   // R23, R24, R25
   r23_to_r25: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -451,7 +514,7 @@ const specificRoutes_main = {
   ],
   // R26
   r26: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 7, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -492,7 +555,7 @@ const specificRoutes_main = {
   ],
   // 피크닉존
   picninc: [
-    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg"},
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg"},
     { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
     { step: 6, locationName: "해링턴 플레이스존 옆", baseImageUrl: "/images/gate3/gate8.jpg"},
     { step: 7, locationName: "1층 GATE9", baseImageUrl: "/images/gate3/gate9.jpg"},
@@ -500,6 +563,18 @@ const specificRoutes_main = {
     { step: 9, locationName: "2층", baseImageUrl: "/images/gate3/2f.jpg"},
     { step: 10, locationName: "MD 대여존 앞", baseImageUrl: "/images/gate3/rental_zone.jpg"},
     { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/picnic_entry.jpg"},
+  ],
+  // FS1, FS2, FS3
+  fs1_to_fs3: [
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
+  ],
+  // FS4, FS5, FS6, FS7
+  fs4_to_fs7: [
+    { step: 4, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 5, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 6, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ]
 };
 
@@ -507,36 +582,36 @@ const specificRoutes_main = {
 const specificRoutes_south = {
   // F1 ~ F4 그룹 (모두 동일한 끝 경로)
   f1_to_f4: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 3, locationName: "좌석 입구", baseImageUrl: "/images/north_gate/f1_entry.jpg" }
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 3, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
   ],
   // F5 ~ F7 그룹
   f5_to_f7: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ],
   // R10
   r10: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_r10.jpg" },
     { step: 3, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor10_1.jpg" }
   ],
   // R11, R12, S1
   r11_r12_s1: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 4, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor11_1.jpg"}
   ],
   // R13, S2
   r13_s2: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
-    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
     { step: 4, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor13_1.jpg"}
   ],
   // R14, S3
   r14_s3: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor14_1.jpg"}
@@ -584,12 +659,13 @@ const specificRoutes_south = {
     { step: 4, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
     { step: 5, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
     { step: 6, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
-    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
+    { step: 7, locationName: "R2 뒤", baseImageUrl: "/images/gate3/behind_r2.jpg"},
+    { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
   ],
   // T3
   t3: [
     { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
-    { step: 3, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 3, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/t3_1.jpg"},
     { step: 4, locationName: "2층 입구 앞", baseImageUrl: "/images/gate3/gate2_front.jpg" },
     { step: 5, locationName: "2층 입구", baseImageUrl: "/images/gate3/gate2_entry.jpg"},
     { step: 6, locationName: "2층 계단", baseImageUrl: "/images/gate3/2nd_stairs.jpg"},
@@ -598,7 +674,7 @@ const specificRoutes_south = {
   ],
   // R15, R16
   r15_r16: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "좌석 입구 옆", baseImageUrl: "/images/gate3/r15_entry.jpg" },
@@ -606,7 +682,7 @@ const specificRoutes_south = {
   ],
   // R17, R18, R19
   r17_to_r19: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -615,7 +691,7 @@ const specificRoutes_south = {
   ],
   // R20, R21, R22
   r20_to_r22: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -624,7 +700,7 @@ const specificRoutes_south = {
   ],
   // R23, R24, R25
   r23_to_r25: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
@@ -633,13 +709,208 @@ const specificRoutes_south = {
   ],
   // R26
   r26: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg" },
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
     { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
     { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
     { step: 5, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
     { step: 6, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r20.jpg" },
     { step: 7, locationName: "가변석 좌측", baseImageUrl: "/images/gate3/r26_entry.jpg" },
     { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r26.jpg" }
+  ],
+  // 일반 지정석 1-17
+  gen_1_to_17 : [
+    { step: 5, locationName: "2층 게이트10 앞", baseImageUrl: "/images/2f_gate/2f_right.jpg"},
+    { step: 6, locationName: "2층 화장실 앞", baseImageUrl: "/images/2f_gate/2f_gen_free.jpg"},
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/2f_gate/2f_gate9.jpg"},
+  ],
+  // 일반 지정석 18-55
+  gen_18_to_55 : [
+    { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/2f_gate/2f_gate10.jpg" },
+  ],
+  // 일반 지정석 56-105
+  gen_56_to_105 : [
+    { step: 5, locationName: "2층 게이트10 앞", baseImageUrl: "/images/2f_gate/2f_left.jpg" },
+    { step: 6, locationName: "2층 계단 앞", baseImageUrl: "/images/2f_gate/2f_56.jpg"},
+    { step: 7, locationName: "2층 CU 매대 앞", baseImageUrl: "/images/2f_gate/2f_cu.jpg"},
+    { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/2f_gate/2f_gate11.jpg"},
+  ],
+  // 일반 지정석 106-160
+  gen_106_to_160 : [
+    { step: 5, locationName: "2층 게이트10 앞", baseImageUrl: "/images/2f_gate/2f_left.jpg" },
+    { step: 6, locationName: "2층 계단 앞", baseImageUrl: "/images/2f_gate/2f_56.jpg"},
+    { step: 7, locationName: "2층 CU 매대 앞", baseImageUrl: "/images/2f_gate/2f_cu.jpg"},
+    { step: 8, locationName: "2층 게이트11 앞", baseImageUrl: "/images/2f_gate/2f_gate11f.jpg"},
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/2f_gate/2f_gate12.jpg"},
+  ],
+  // 일반 2층 자유석
+  gen_2f : [
+    { step: 5, locationName: "2층 게이트10 앞", baseImageUrl: "/images/2f_gate/2f_right.jpg"},
+    { step: 6, locationName: "2층 화장실 앞", baseImageUrl: "/images/2f_gate/2f_gen_free.jpg"},
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/2f_gate/2f_gate9.jpg"},
+  ],
+  // 피크닉존
+  picninc: [
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg"},
+    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 4, locationName: "해링턴 플레이스존 옆", baseImageUrl: "/images/gate3/gate8.jpg"},
+    { step: 5, locationName: "1층 GATE9", baseImageUrl: "/images/gate3/gate9.jpg"},
+    { step: 6, locationName: "2층 계단", baseImageUrl: "/images/gate3/2f_stairs.jpg"},
+    { step: 7, locationName: "2층", baseImageUrl: "/images/gate3/2f.jpg"},
+    { step: 8, locationName: "MD 대여존 앞", baseImageUrl: "/images/gate3/rental_zone.jpg"},
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/picnic_entry.jpg"},
+  ],
+  // FS1, FS2, FS3
+  fs1_to_fs3: [
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 3, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
+  ],
+  // FS4, FS5, FS6, FS7
+  fs4_to_fs7: [
+    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 4, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 5, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
+  ]
+};
+
+// 2.4 서문 - 도착지 그룹별 추가 경로 정의
+const specificRoutes_west = {
+  // F1 ~ F4 그룹 (모두 동일한 끝 경로)
+  f1_to_f4: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
+  ],
+  // F5 ~ F7 그룹
+  f5_to_f7: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
+  ],
+  // R10
+  r10: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_r10.jpg" },
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor10_1.jpg" }
+  ],
+  // R11, R12, S1
+  r11_r12_s1: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
+    { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor11_1.jpg"}
+  ],
+  // R13, S2
+  r13_s2: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/sup_back.jpg"},
+    { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor13_1.jpg"}
+  ],
+  // R14, S3
+  r14_s3: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor14_1.jpg"}
+  ],
+  // R9
+  r9: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tor9_1.jpg"}
+  ],
+  // R7, R8
+  r7_r8: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 8, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r7.jpg" }
+  ],
+  // R6
+  r6: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 8, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r6.jpg"}
+  ],
+  // R4, R5
+  r4_r5: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 8, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
+    { step: 9, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
+    { step: 10, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r4.jpg" }
+  ],
+  // R2, R3
+  r2_r3: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 8, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
+    { step: 9, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
+    { step: 10, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r2.jpg"}
+  ],
+  // R1
+  r1: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r9.jpg"},
+    { step: 8, locationName: "2층 계단 앞", baseImageUrl: "/images/gate3/gate2.jpg" },
+    { step: 9, locationName: "구령대 계단", baseImageUrl: "/images/gate3/center_stairs.jpg"},
+    { step: 10, locationName: "구령대", baseImageUrl: "/images/gate3/center.jpg"},
+    { step: 11, locationName: "R2 뒤", baseImageUrl: "/images/gate3/behind_r2.jpg"},
+    { step: 12, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r1.jpg"}
+  ],
+  // T3
+  t3: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_right.jpg" },
+    { step: 7, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/t3_1.jpg"},
+    { step: 8, locationName: "2층 입구 앞", baseImageUrl: "/images/gate3/gate2_front.jpg" },
+    { step: 9, locationName: "2층 입구", baseImageUrl: "/images/gate3/gate2_entry.jpg"},
+    { step: 10, locationName: "2층 계단", baseImageUrl: "/images/gate3/2nd_stairs.jpg"},
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/t3_entry.jpg"},
+    { step: 12, locationName: "좌석", baseImageUrl: "/images/gate3/t3.jpg"}
+  ],
+  // R15, R16
+  r15_r16: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "좌석 입구 옆", baseImageUrl: "/images/gate3/r15_entry.jpg" },
+    { step: 10, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r15.jpg" }
+  ],
+  // R17, R18, R19
+  r17_to_r19: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
+    { step: 10, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/r17_entry.jpg" },
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r17.jpg" }
+  ],
+  // R20, R21, R22
+  r20_to_r22: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
+    { step: 10, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/r20_entry.jpg" },
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r20.jpg" }
+  ],
+  // R23, R24, R25
+  r23_to_r25: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
+    { step: 10, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/r23_entry.jpg" },
+    { step: 11, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r23.jpg" }
+  ],
+  // R26
+  r26: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "가변석 옆", baseImageUrl: "/images/gate3/gate8.jpg" },
+    { step: 10, locationName: "가변석 뒤", baseImageUrl: "/images/gate3/behind_r20.jpg" },
+    { step: 11, locationName: "가변석 좌측", baseImageUrl: "/images/gate3/r26_entry.jpg" },
+    { step: 12, locationName: "좌석 입구", baseImageUrl: "/images/gate3/r26.jpg" }
   ],
   // 일반 지정석 1-17
   gen_1_to_17 : [
@@ -674,14 +945,26 @@ const specificRoutes_south = {
   ],
   // 피크닉존
   picninc: [
-    { step: 2, locationName: "대형 포토존", baseImageUrl: "/images/north_gate/photozone.jpg"},
-    { step: 3, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
-    { step: 4, locationName: "해링턴 플레이스존 옆", baseImageUrl: "/images/gate3/gate8.jpg"},
-    { step: 5, locationName: "1층 GATE9", baseImageUrl: "/images/gate3/gate9.jpg"},
-    { step: 6, locationName: "2층 계단", baseImageUrl: "/images/gate3/2f_stairs.jpg"},
-    { step: 7, locationName: "2층", baseImageUrl: "/images/gate3/2f.jpg"},
-    { step: 8, locationName: "MD 대여존 앞", baseImageUrl: "/images/gate3/rental_zone.jpg"},
-    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/picnic_entry.jpg"},
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg"},
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg"},
+    { step: 8, locationName: "해링턴 플레이스존 옆", baseImageUrl: "/images/gate3/gate8.jpg"},
+    { step: 9, locationName: "1층 GATE9", baseImageUrl: "/images/gate3/gate9.jpg"},
+    { step: 10, locationName: "2층 계단", baseImageUrl: "/images/gate3/2f_stairs.jpg"},
+    { step: 11, locationName: "2층", baseImageUrl: "/images/gate3/2f.jpg"},
+    { step: 12, locationName: "MD 대여존 앞", baseImageUrl: "/images/gate3/rental_zone.jpg"},
+    { step: 13, locationName: "좌석 입구", baseImageUrl: "/images/gate3/picnic_entry.jpg"},
+  ],
+  // FS1, FS2, FS3
+  fs1_to_fs3: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone_f1.jpg" },
+    { step: 7, locationName: "좌석 입구", baseImageUrl: "/images/gate3/f1_entry.jpg" }
+  ],
+  // FS4, FS5, FS6, FS7
+  fs4_to_fs7: [
+    { step: 6, locationName: "대형 포토존", baseImageUrl: "/images/gate3/photozone.jpg" },
+    { step: 7, locationName: "서포터즈석 뒤", baseImageUrl: "/images/gate3/3tof5_1.jpg" },
+    { step: 8, locationName: "푸드트럭 앞", baseImageUrl: "/images/gate3/3tof5_2.jpg" },
+    { step: 9, locationName: "좌석 입구", baseImageUrl: "/images/gate3/3tof5_3.jpg" }
   ]
 };
 
@@ -755,6 +1038,16 @@ const routeData = {
 
   north_gate_to_gen_2f: [...baseNorthto2fGateRoute, ...specificRoutes_north.gen_2f],
 
+  north_gate_to_sup_fs1: [...baseNorthto3Route, ...specificRoutes_north.fs1_to_fs3],
+  north_gate_to_sup_fs2: [...baseNorthto3Route, ...specificRoutes_north.fs1_to_fs3],
+  north_gate_to_sup_fs3: [...baseNorthto3Route, ...specificRoutes_north.fs1_to_fs3],
+
+  
+  north_gate_to_sup_fs4: [...baseNorthto3Route, ...specificRoutes_north.fs4_to_fs7],
+  north_gate_to_sup_fs5: [...baseNorthto3Route, ...specificRoutes_north.fs4_to_fs7],
+  north_gate_to_sup_fs6: [...baseNorthto3Route, ...specificRoutes_north.fs4_to_fs7],
+  north_gate_to_sup_fs7: [...baseNorthto3Route, ...specificRoutes_north.fs4_to_fs7],
+
   // 정문
   main_gate_to_sup_f1: [...baseMainto3Route, ...specificRoutes_main.f1_to_f4],
   main_gate_to_sup_f2: [...baseMainto3Route, ...specificRoutes_main.f1_to_f4],
@@ -824,6 +1117,16 @@ const routeData = {
 
   main_gate_to_gen_2f: [...baseMainto2fGateRoute, ...specificRoutes_main.gen_2f],
 
+  main_gate_to_sup_fs1: [...baseMainto3Route, ...specificRoutes_main.fs1_to_fs3],
+  main_gate_to_sup_fs2: [...baseMainto3Route, ...specificRoutes_main.fs1_to_fs3],
+  main_gate_to_sup_fs3: [...baseMainto3Route, ...specificRoutes_main.fs1_to_fs3],
+
+  
+  main_gate_to_sup_fs4: [...baseMainto3Route, ...specificRoutes_main.fs4_to_fs7],
+  main_gate_to_sup_fs5: [...baseMainto3Route, ...specificRoutes_main.fs4_to_fs7],
+  main_gate_to_sup_fs6: [...baseMainto3Route, ...specificRoutes_main.fs4_to_fs7],
+  main_gate_to_sup_fs7: [...baseMainto3Route, ...specificRoutes_main.fs4_to_fs7],
+
   //남문
   south_gate_to_sup_f1: [...baseSouthto3Route, ...specificRoutes_south.f1_to_f4],
   south_gate_to_sup_f2: [...baseSouthto3Route, ...specificRoutes_south.f1_to_f4],
@@ -892,9 +1195,101 @@ const routeData = {
   south_gate_to_picnic: [...baseSouthto3Route, ...specificRoutes_south.picninc],
 
   south_gate_to_gen_2f: [...baseSouthto2fGateRoute, ...specificRoutes_south.gen_2f],
+
+  south_gate_to_sup_fs1: [...baseSouthto3Route, ...specificRoutes_south.fs1_to_fs3],
+  south_gate_to_sup_fs2: [...baseSouthto3Route, ...specificRoutes_south.fs1_to_fs3],
+  south_gate_to_sup_fs3: [...baseSouthto3Route, ...specificRoutes_south.fs1_to_fs3],
+
+  
+  south_gate_to_sup_fs4: [...baseSouthto3Route, ...specificRoutes_south.fs4_to_fs7],
+  south_gate_to_sup_fs5: [...baseSouthto3Route, ...specificRoutes_south.fs4_to_fs7],
+  south_gate_to_sup_fs6: [...baseSouthto3Route, ...specificRoutes_south.fs4_to_fs7],
+  south_gate_to_sup_fs7: [...baseSouthto3Route, ...specificRoutes_south.fs4_to_fs7],
+
+
+  //서문
+  // 정문
+  west_gate_to_sup_f1: [...baseWestto3Route, ...specificRoutes_west.f1_to_f4],
+  west_gate_to_sup_f2: [...baseWestto3Route, ...specificRoutes_west.f1_to_f4],
+  west_gate_to_sup_f3: [...baseWestto3Route, ...specificRoutes_west.f1_to_f4],
+  west_gate_to_sup_f4: [...baseWestto3Route, ...specificRoutes_west.f1_to_f4],
+
+  west_gate_to_sup_f5: [...baseWestto3Route, ...specificRoutes_west.f5_to_f7],
+  west_gate_to_sup_f6: [...baseWestto3Route, ...specificRoutes_west.f5_to_f7],
+  west_gate_to_sup_f7: [...baseWestto3Route, ...specificRoutes_west.f5_to_f7],
+
+  west_gate_to_sup_r10: [...baseWestto3Route, ...specificRoutes_west.r10],
+
+  west_gate_to_sup_r11: [...baseWestto3Route, ...specificRoutes_west.r11_r12_s1],
+  west_gate_to_sup_r12: [...baseWestto3Route, ...specificRoutes_west.r11_r12_s1],
+  west_gate_to_sup_s1: [...baseWestto3Route, ...specificRoutes_west.r11_r12_s1],
+
+  west_gate_to_sup_r13: [...baseWestto3Route, ...specificRoutes_west.r13_s2],
+  west_gate_to_sup_s2: [...baseWestto3Route, ...specificRoutes_west.r13_s2],
+
+  west_gate_to_sup_r14: [...baseWestto3Route, ...specificRoutes_west.r14_s3],
+  west_gate_to_sup_s3: [...baseWestto3Route, ...specificRoutes_west.r14_s3],
+
+  west_gate_to_var_r9: [...baseWestto3Route, ...specificRoutes_west.r9],
+
+  west_gate_to_var_r7: [...baseWestto3Route, ...specificRoutes_west.r7_r8],
+  west_gate_to_var_r8: [...baseWestto3Route, ...specificRoutes_west.r7_r8],
+  
+  west_gate_to_var_r6: [...baseWestto3Route, ...specificRoutes_west.r6],
+  
+  west_gate_to_var_r4: [...baseWestto3Route, ...specificRoutes_west.r4_r5],
+  west_gate_to_var_r5: [...baseWestto3Route, ...specificRoutes_west.r4_r5],
+  
+  west_gate_to_var_r2: [...baseWestto3Route, ...specificRoutes_west.r2_r3],
+  west_gate_to_var_r3: [...baseWestto3Route, ...specificRoutes_west.r2_r3],
+  
+  west_gate_to_var_r1: [...baseWestto3Route, ...specificRoutes_west.r1],
+
+  west_gate_to_var_r15: [...baseWestto3Route, ...specificRoutes_west.r15_r16],
+  west_gate_to_var_r16: [...baseWestto3Route, ...specificRoutes_west.r15_r16],
+  
+  west_gate_to_var_r17: [...baseWestto3Route, ...specificRoutes_west.r17_to_r19],
+  west_gate_to_var_r18: [...baseWestto3Route, ...specificRoutes_west.r17_to_r19],
+  west_gate_to_var_r19: [...baseWestto3Route, ...specificRoutes_west.r17_to_r19],
+  
+  west_gate_to_var_r20: [...baseWestto3Route, ...specificRoutes_west.r20_to_r22],
+  west_gate_to_var_r21: [...baseWestto3Route, ...specificRoutes_west.r20_to_r22],
+  west_gate_to_var_r22: [...baseWestto3Route, ...specificRoutes_west.r20_to_r22],
+
+  west_gate_to_var_r23: [...baseWestto3Route, ...specificRoutes_west.r23_to_r25],
+  west_gate_to_var_r24: [...baseWestto3Route, ...specificRoutes_west.r23_to_r25],
+  west_gate_to_var_r25: [...baseWestto3Route, ...specificRoutes_west.r23_to_r25],
+  
+  west_gate_to_var_r26: [...baseWestto3Route, ...specificRoutes_west.r26],
+
+  west_gate_to_table_t3: [...baseWestto3Route, ...specificRoutes_west.t3],
+
+  west_gate_to_gen_1_17: [...baseWestto2fGateRoute, ...specificRoutes_west.gen_1_to_17],
+  west_gate_to_gen_18_55: [...baseWestto2fGateRoute, ...specificRoutes_west.gen_18_to_55],
+  west_gate_to_gen_56_105: [...baseWestto2fGateRoute, ...specificRoutes_west.gen_56_to_105],
+  west_gate_to_gen_106_160: [...baseWestto2fGateRoute, ...specificRoutes_west.gen_106_to_160],
+
+  west_gate_to_neutral: [...baseWestto11Route],
+
+  west_gate_to_away: [...baseWesttoAwayRoute],
+
+  west_gate_to_picnic: [...baseWestto3Route, ...specificRoutes_west.picninc],
+
+  west_gate_to_gen_2f: [...baseWestto2fGateRoute, ...specificRoutes_west.gen_2f],
+
+  west_gate_to_sup_fs1: [...baseWestto3Route, ...specificRoutes_west.fs1_to_fs3],
+  west_gate_to_sup_fs2: [...baseWestto3Route, ...specificRoutes_west.fs1_to_fs3],
+  west_gate_to_sup_fs3: [...baseWestto3Route, ...specificRoutes_west.fs1_to_fs3],
+
+  
+  west_gate_to_sup_fs4: [...baseWestto3Route, ...specificRoutes_west.fs4_to_fs7],
+  west_gate_to_sup_fs5: [...baseWestto3Route, ...specificRoutes_west.fs4_to_fs7],
+  west_gate_to_sup_fs6: [...baseWestto3Route, ...specificRoutes_west.fs4_to_fs7],
+  west_gate_to_sup_fs7: [...baseWestto3Route, ...specificRoutes_west.fs4_to_fs7],
 };
 
-// --- 기존 routeData 객체 코드 아래에 추가 ---
+
+
 
 // 💡 SearchPanel에서 사용할 좌석 데이터 매핑
 export const SEAT_MAP: Record<string, { id: string; label: string }[]> = {
@@ -903,22 +1298,36 @@ export const SEAT_MAP: Record<string, { id: string; label: string }[]> = {
     { id: 'gen_18_55', label: '지정석 18번-55번' },
     { id: 'gen_56_105', label: '지정석 56번-105번' },
     { id: 'gen_106_160', label: '지정석 106번-160번' },
+  ],
+  general_2f: [
     { id: 'gen_2f', label: '2층 자유석' },
   ],
   variable: [
     { id: 'var_r1', label: 'R1' }, { id: 'var_r2', label: 'R2' }, { id: 'var_r3', label: 'R3' },
     { id: 'var_r4', label: 'R4' }, { id: 'var_r5', label: 'R5' }, { id: 'var_r6', label: 'R6' },
     { id: 'var_r7', label: 'R7' }, { id: 'var_r8', label: 'R8' }, { id: 'var_r9', label: 'R9' },
+  ],
+  harrington: [
     { id: 'var_r15', label: 'R15' }, { id: 'var_r16', label: 'R16' }, { id: 'var_r17', label: 'R17' },
     { id: 'var_r18', label: 'R18' }, { id: 'var_r19', label: 'R19' }, { id: 'var_r20', label: 'R20' },
     { id: 'var_r21', label: 'R21' }, { id: 'var_r22', label: 'R22' }, { id: 'var_r23', label: 'R23' },
     { id: 'var_r24', label: 'R24' }, { id: 'var_r25', label: 'R25' }, { id: 'var_r26', label: 'R26' },
   ],
-  supporters: [
+  firststanding: [
+    { id: 'sup_fs1', label: 'FS1' }, { id: 'sup_fs2', label: 'FS2' }, { id: 'sup_fs3', label: 'FS3' },
+    { id: 'sup_fs4', label: 'FS4' }, { id: 'sup_fs5', label: 'FS5' }, { id: 'sup_fs6', label: 'FS6' },
+    { id: 'sup_fs7', label: 'FS7' }, 
+  ],
+  first: [
     { id: 'sup_f1', label: 'F1' }, { id: 'sup_f2', label: 'F2' }, { id: 'sup_f3', label: 'F3' },
     { id: 'sup_f4', label: 'F4' }, { id: 'sup_f5', label: 'F5' }, { id: 'sup_f6', label: 'F6' },
-    { id: 'sup_f7', label: 'F7' }, { id: 'sup_s1', label: 'S1' }, { id: 'sup_s2', label: 'S2' },
-    { id: 'sup_s3', label: 'S3' }, { id: 'sup_r10', label: 'R10' }, { id: 'sup_r11', label: 'R11' },
+    { id: 'sup_f7', label: 'F7' }, 
+  ],
+  standing: [
+    { id: 'sup_s1', label: 'S1' }, { id: 'sup_s2', label: 'S2' }, { id: 'sup_s3', label: 'S3' }, 
+  ],
+  supporters: [
+    { id: 'sup_r10', label: 'R10' }, { id: 'sup_r11', label: 'R11' },
     { id: 'sup_r12', label: 'R12' }, { id: 'sup_r13', label: 'R13' }, { id: 'sup_r14', label: 'R14' },
   ],
   tables: [
