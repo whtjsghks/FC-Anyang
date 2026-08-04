@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Map, Sofa, ChevronDown, MapPin, Search, Ticket } from 'lucide-react';
+import { Map, Sofa, ChevronDown, MapPin, Search, Ticket, X } from 'lucide-react';
 import { SEAT_MAP } from '../../public/data/routes'; // 💡 routes.ts 파일 경로에 맞게 임포트
 
 interface SearchPanelProps {
@@ -10,6 +10,9 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
   const [startPoint, setStartPoint] = useState<string>('출발지점');
   const [ticketType, setTicketType] = useState<string>('좌석권종');
   const [seatZone, setSeatZone] = useState<string>('좌석구역');
+
+  const [showMap, setShowMap] = useState<boolean>(false);
+  const [showSeatInfo, setShowSeatInfo] = useState<boolean>(false);
 
   const handleTicketTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTicketType(e.target.value);
@@ -54,11 +57,11 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
         <h1 className="text-2xl font-bold text-center mb-6 tracking-tight">경기장 길찾기</h1>
 
         <div className="grid grid-cols-2 gap-4 mb-8">
-          <button type="button" className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
+          <button type="button" onClick={() => setShowMap(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
             <Map className="w-6 h-6 text-gray-300 mb-2" strokeWidth={1.5} />
             <span className="text-sm font-medium text-gray-300">지도</span>
           </button>
-          <button type="button" className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
+          <button type="button" onClick={() => setShowSeatInfo(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
             <Sofa className="w-6 h-6 text-gray-300 mb-2" strokeWidth={1.5} />
             <span className="text-sm font-medium text-gray-300">좌석정보찾기</span>
           </button>
@@ -138,6 +141,52 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
           </button>
         </form>
       </div>
+
+      {showMap && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-md bg-[#1e1e1e] rounded-2xl p-4 shadow-2xl flex flex-col h-[70vh]">
+            {/* 닫기 버튼 */}
+            <button 
+              onClick={() => setShowMap(false)}
+              className="absolute top-4 right-4 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors z-10"
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+            
+            <h2 className="text-lg font-bold text-center mb-4">경기장 지도</h2>
+            
+            {/* 지도 이미지 들어갈 곳 */}
+            <div className="flex-1 w-full bg-black rounded-xl overflow-hidden relative">
+              <img 
+                src="/images/ournation_map.png"
+                alt="경기장 지도" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSeatInfo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="relative w-full max-w-md bg-[#1e1e1e] rounded-2xl p-4 shadow-2xl flex flex-col h-[70vh]">
+            <button 
+              onClick={() => setShowSeatInfo(false)} // 🌟 닫기 버튼 클릭 시 false로 변경
+              className="absolute top-4 right-4 p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors z-10"
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+            <h2 className="text-lg font-bold text-center mb-4">좌석 배치도</h2>
+            <div className="flex-1 w-full bg-black rounded-xl overflow-hidden relative">
+              <img 
+                src="/images/SeatInfo.png"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
