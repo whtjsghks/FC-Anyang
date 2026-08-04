@@ -176,7 +176,6 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
             >
               <X className="w-5 h-5 text-white" />
             </button>
-            <h2 className="text-lg font-bold text-center mb-4">좌석 배치도</h2>
             <div className="flex-1 w-full bg-black rounded-xl overflow-hidden relative">
               <img 
                 src="/images/SeatInfo.png"
