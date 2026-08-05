@@ -57,11 +57,11 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
         <h1 className="text-2xl font-bold text-center mb-6 tracking-tight">경기장 길찾기</h1>
 
         <div className="grid grid-cols-2 gap-4 mb-8">
-          <button type="button" onClick={() => setShowMap(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
+          <button type="button" onClick={() => setShowMap(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-[#4f1b87] py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
             <Map className="w-6 h-6 text-gray-300 mb-2" strokeWidth={1.5} />
             <span className="text-sm font-medium text-gray-300">지도</span>
           </button>
-          <button type="button" onClick={() => setShowSeatInfo(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-gray-800 py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
+          <button type="button" onClick={() => setShowSeatInfo(true)} className="flex flex-col items-center justify-center bg-[#1e1e1e] border border-[#4f1b87] py-4 rounded-2xl hover:bg-[#2a2a2a] active:scale-95 transition-all">
             <Sofa className="w-6 h-6 text-gray-300 mb-2" strokeWidth={1.5} />
             <span className="text-sm font-medium text-gray-300">좌석정보찾기</span>
           </button>
@@ -178,7 +178,7 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
             </button>
             <div className="flex-1 w-full bg-black rounded-xl overflow-hidden relative">
               <img 
-                src="/images/SeatInfo.png"
+                src="/images/SeatInfo.jpg"
                 className="w-full h-full object-contain"
               />
             </div>
