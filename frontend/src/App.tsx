@@ -61,7 +61,7 @@ export default function WayfinderContainer() { //[cite: 1]
   if (isLoading) return <div style={{ textAlign: 'center', padding: '50px' }}>로딩 중...</div>; //[cite: 1]
 
   return ( //[cite: 1]
-      <main style={{ padding: '20px' }}> {/*[cite: 1] */}
+      <main className="w-full min-h-screen bg-[#111111] p-0 m-0"> {/*[cite: 1] */}
         {routeData.length === 0 ? ( //[cite: 1]
           <SearchPanel onSubmit={handleSearch} /> //[cite: 1]
         ) : ( //[cite: 1]
