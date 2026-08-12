@@ -36,7 +36,7 @@ export const SearchPanel: React.FC<SearchPanelProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto min-h-screen bg-[#111111] text-white">
+    <div className="w-full min-h-screen bg-[#111111] text-white">
       <div className="w-full bg-[#502878] pt-12 pb-10 flex justify-center relative rounded-b-[2.5rem] shadow-lg shadow-[#502878]/20">
         <div className="absolute left-1/2 -translate-x-1/2 -bottom-10 w-24 h-24 bg-[#111111] rounded-full p-2 flex items-center justify-center border-4 border-[#111111] shadow-xl z-10">
           <img 
